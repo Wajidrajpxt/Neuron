@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Neuron</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: FamilyPoppins, sans-serif;
+            ;
+        }
+
+        .section_1 {
+            height: 120vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            background-image: url(./n105.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+        }
+
+        .header {
+            height: 12vh;
+            width: 100%;
+            /* border: 1p solid #000; */
+        }
+
+        .mail_1 {
+            color: white;
+            font-size: 17px;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .info {
+            font-size: 20px;
+            color: white;
+            margin-left: 50px;
+            margin-top: -20px;
+            font-weight: 400;
+            transition-property: opacity;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+
+        .info:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .phone_1 {
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid #000; */
+            margin-left: 290px;
+            margin-top: -20px;
+            text-align: center;
+        }
+
+        .phone {
+            color: white;
+            font-size: 18px;
+        }
+
+        .no {
+            color: white;
+            font-size: 18px;
+            margin-left: 20px;
+            margin-top: -20px;
+            transition-property: opacity;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+
+        .no:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .advatise {
+            height: 40px;
+            width: 330px;
+            /* border: 1px solid #000; */
+            margin-left: 1000px;
+            margin-top: -20px;
+            padding: 1px;
+        }
+
+        .data {
+            height: 100%;
+            width: 50px;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .google {
+            color: white;
+            font-size: 20px;
+            transition-property: opacity;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+
+        .google:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .heading {
+            height: 1px;
+            width: 80%;
+            /* border: 1px solid blue; */
+           background-color: rgba(105, 105, 105, 0.658);
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        .heading_1 {
+            height: 40px;
+            width: 51%;
+            /* border: 1px solid #000; */
+            margin-left: 480px;
+            margin-top: -25px;
+        }
+
+        .Neuron_1 {
+            height: 40px;
+            width: 150px;
+            /* border: 1px solid #000; */
+            margin-left: 100px;
+            margin-top: 25px;
+        }
+
+        .img {
+            
+            height: 100%;
+            width: 100%;
+        }
+
+        .feature {
+            font-family: Poppins - 500;
+            height: 40px;
+            width: 70px;
+
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            color: white;
+            text-align: center;
+            font-size: 19px;
+        }
+        .feature:hover{
+            color: rgba(105, 105, 105, 0.5);
+            cursor: pointer;
+        }
+
+        .store {
+            height: 40px;
+            width: 100px;
+            /* border: 1px solid #000; */
+            margin-left: 1210px;
+            margin-top: -40px;
+        }
+
+        .search {
+            font-size: 19px;
+            color: white;
+            margin-left: 30px;
+        }
+        .search:hover{
+            color: rgb(105,105,105);
+            cursor: pointer;
+        }
+
+
+        .i_store {
+            font-size: 19px;
+            color: white;
+            margin-left: 20px;
+        }
+        .i_store:hover{
+            color: rgb(105,105,105);
+            cursor: pointer;
+        }
+
+        .parent {
+            height: 90vh;
+            width: 100%;
+            border: 1px solid #000;
+            padding: 1px;
+        }
+
+        .child_1 {
+            height: 100%;
+            width: 45%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .learning {
+            font-size: 60px;
+            color: white;
+            margin-top: 160px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .invoive {
+            font-size: 27px;
+            color: white;
+            margin-left: 50px;
+            margin-top: 20px;
+            /* text-align: center; */
+            font-weight: 500;
+        }
+
+        .l_m {
+            height: 50px;
+            width: 150px;
+            border: 1px solid white;
+            margin-left: 50px;
+            margin-top: 30px;
+            border-radius: 50px;
+            background-color: white;
+            color: rgb(1, 151, 227);
+            font-size: 18px;
+        }
+
+        .l_m:hover {
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+        .j_n {
+            height: 50px;
+            width: 150px;
+            border: 1px solid white;
+            margin-left: 50px;
+            margin-top: 30px;
+            border-radius: 50px;
+            background-color: rgb(1, 151, 227);
+            font-size: 19px;
+            text-align: center;
+            color: white;
+        }
+
+        .j_n:hover {
+            background-color: white;
+            color: rgb(1, 151, 227);
+            cursor: pointer;
+        }
+
+        .child_2 {
+            height: 100%;
+            width: 54%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./n107.png);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+
+
+        }
+
+        .child_2_1 {
+            height: 100%;
+            width: 48%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .animate {
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation-name: animate;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes animate {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 40px;
+            }
+        }
+
+        .section_2 {
+            height: 130vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+        }
+
+        .parent_1 {
+            height: 130vh;
+            width: 50%;
+            /* border: 1px solid #000; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .child_3 {
+            height: 250px;
+            width: 250px;
+            /* border: 1px solid #000; */
+            margin-left: 100px;
+        }
+
+        .img_1 {
+            height: 110px;
+            width: 110px;
+            margin-left: 70px;
+        }
+
+        .advanced {
+            font-size: 21px;
+            text-align: center;
+            color: black;
+            margin-top: 20px;
+        }
+
+        .find {
+            font-size: 17px;
+            text-align: center;
+            color: gray;
+            margin-top: 30px;
+        }
+
+        .ch:hover {
+            background: linear-gradient(120deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+       
+        }
+
+        .child_4 {
+            height: 250px;
+            width: 250px;
+            /* border: 1px solid #000; */
+            margin-left: 390px;
+            margin-top: -50px;
+        }
+
+        .ch:hover .imge {
+            filter: brightness(200%);
+        }
+
+        .img_2 {
+            height: 110px;
+            width: 110px;
+            /* border: 1px solid #000; */
+            margin-left: 70px;
+        }
+
+        .child_5 {
+            height: 250px;
+            width: 250px;
+            /* border: 1px solid #000; */
+            margin-top: -80px;
+            margin-left: 100px;
+        }
+
+        .child_6 {
+            height: 250px;
+            width: 250px;
+            /* border: 1px solid #000; */
+            margin-top: -120px;
+            margin-left: 390px;
+        }
+
+        .img_3 {
+            height: 100px;
+            width: 100px;
+            /* border: 1px solid #000;    */
+            margin-left: 70px;
+        }
+
+        .ch:hover .find {
+            color: white;
+        }
+
+        .ch:hover .advanced {
+            color: white;
+        }
+
+        .parent_2 {
+            height: 130vh;
+            width: 49%;
+            /* border: 1px solid #000; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .line {
+            height: 15px;
+            width: 200px;
+            background: linear-gradient(200deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+            margin-left: 70px;
+            margin-top: 200px;
+        }
+
+        .power {
+            font-size: 40px;
+            margin-top: -50px;
+            margin-left: 60px;
+        }
+
+        .dolor {
+            font-size: 19px;
+            margin-top: 50px;
+            margin-left: 60px;
+            line-height: 30px;
+            color: gray;
+        }
+
+        .dolor_1 {
+            font-size: 19px;
+            margin-top: 80px;
+            margin-left: 60px;
+            line-height: 30px;
+            color: gray;
+        }
+
+        .l_m_1 {
+            height: 50px;
+            width: 180px;
+            border-radius: 50px;
+            border: 1px solid white;
+            background: linear-gradient(140deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+        
+            font-size: 19px;
+            color: white;
+            margin-left: 60px;
+            margin-top: 25px;
+        }
+
+        .l_m_1:hover {
+            background: linear-gradient(0deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+        
+        }
+
+        .section_3 {
+            height: 102vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            padding: 1px;
+        }
+
+        .parent_3 {
+            height: 100vh;
+            width: 49%;
+            /* border: 1px solid #000; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .we {
+            font-size: 40px;
+            margin-top: 50px;
+            margin-left: 60px;
+        }
+
+        .circle_2 {
+            height: 100px;
+            width: 100px;
+            /* border: 1px solid #000; */
+            position: relative;
+            border-radius: 100%;
+            top: -80px;
+            left: 410px;
+        }
+
+        .sub_circle {
+            height: 70px;
+            width: 70px;
+            /* border: 1px solid #000; */
+            position: absolute;
+            border-radius: 50px;
+            left: 0;
+            top: 0;
+            background: linear-gradient(0deg, rgb(72, 218, 150), rgb(129, 129, 209));
+            /* transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: linear; */
+            
+        }
+        .circle_2:hover .sub_circle{
+            animation-name: circle_2;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes circle_2 {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        .icons_4 {
+            height: 70px;
+            width: 70px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .playIcon {
+            font-size: 30px;
+            margin-top:20px;
+            color:  (rgba (9, 198, 125, 0.699));
+        }
+
+        .parent_4 {
+            height: 100vh;
+            width: 49%;
+            /* border: 1px solid #000; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./n108.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .section_4 {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            background-color: rgb(239, 241, 247);
+            padding: 1px;
+        }
+
+        .parent_5 {
+            height: 50vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            margin-top: 30vh;
+            background: linear-gradient(140deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+                }
+
+        .experts {
+            height: 100%;
+            width: 24.5%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .project {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 100px;
+            font-weight: 700;
+        }
+
+        .complete {
+            color: white;
+            font-size: 23px;
+            text-align: center;
+            margin-top: 0px;
+            font-weight: 700;
+        }
+
+        .section_5 {
+            height: 160vh;
+            width: 100%;
+            border: 1px solid rgba(192, 192, 192, 0.007);
+            background-color: rgb(239, 241, 247);
+        }
+
+        .margin {
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .our {
+            font-size: 40px;
+            margin-left: 500px;
+            margin-top: -30px;
+        }
+
+        .containerOur {
+            height: 60vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            margin-top: 100px;
+        }
+
+        .card {
+
+            height: 100%;
+            width: 26%;
+            /* border: 1px solid red; */
+            border-radius: 5px;
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 60px;
+            padding: 1px;
+        }
+
+        .pic3 {
+            height: 100px;
+            width: 100px;
+            /* border: 1px solid #000; */
+            margin-left: 120px;
+        }
+
+        .virtual {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 600px;
+            margin-top: 30px;
+        }
+
+        .box:hover .pic3 {
+            filter: brightness(80);
+        }
+
+
+        .low {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600px;
+            margin-top: 30px;
+            color: gray;
+            line-height: 25px;
+        }
+
+        .box:hover {
+            background: linear-gradient(120deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+        }
+
+        .box:hover .low {
+            color: white;
+        }
+
+        .box:hover .virtual {
+            color: white;
+        }
+
+        .margin {
+            /* background: linear-gradient(140deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562)); */
+            margin-top: 20px;
+        }
+
+        .section_6 {
+            height: 120vh;
+            width: 100%;
+            /* border: 5px solid #000; */
+        }
+
+        .arrange {
+
+            margin-top: 100px;
+            margin-left: 520px;
+            background: linear-gradient(140deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));   
+        }
+        .latest {
+            font-size: 38px;
+            text-align: center;
+            margin-top: -40px;
+        }
+
+        .main {
+            height: 60vh;
+            width: 85%;
+            /* border: 1px solid #000; */
+            margin: auto;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+
+        .slide {
+            height: 60vh;
+            width: 200%;
+            /* border: 1px solid red; */
+            margin-top: -20px;
+            padding: 1px;
+            animation-name: slider_21;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            /* animation-iteration-count: infinite;  */
+        }
+
+        @keyframes slider_21 {
+            0% {
+                margin-left: 0;
+            }
+
+            16.5% {
+                margin-left: 0;
+            }
+
+            33% {
+                margin-left: -33%;
+            }
+
+            49.5% {
+                margin-left: -33%;
+            }
+
+            66% {
+                margin-left: -66%;
+            }
+
+            82.5% {
+                margin-left: -66%;
+            }
+
+            100% {
+                margin-left: -100;
+            }
+        }
+
+        .slider {
+            height: 100%;
+            width: 15.3%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            left: 0;
+            margin-left: 20px;
+            top: 0px;
+            overflow: hidden;
+        }
+
+        .img_4 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .content {
+            height: 60vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            /* background-color: black; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+
+        .slider:hover .content {
+            background: linear-gradient(0deg, rgba(9, 198, 125, 0.596), rgba(1, 160, 246, 0.562));
+            cursor: pointer;
+        }
+
+        .api {
+            position: absolute;
+            font-size: 25px;
+            left: 20px;
+            bottom: -50px;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+        }
+
+        .content:hover .api {
+            color: white;
+            cursor: pointer;
+            bottom: 20px;
+        }
+
+        .parent_8 {
+            height: 90vh;
+            width: 85%;
+            /* border: 7px solid black; */
+            background-color: white;
+            margin: auto;
+            padding: 1px;
+            margin-top: -100px;
+        }
+
+        .child_8 {
+            height: 50vh;
+            width: 30%;
+            /* border: 5px solid #000; */
+            margin-top: 20px;
+            
+        }
+
+            .screenshot{
+                height: 100%;
+                width: 100%;
+            }
+            .child_9{
+                height: 85vh;
+                width: 65%;
+                /* border: 5px solid #000; */
+                margin-left: 400px;
+                margin-top: -330px;   
+                
+            }
+
+        .setting {
+            margin-top: 100px;
+            margin-left: 40px;
+        }
+
+        .miss {
+            font-size: 35px;
+            margin-top: -38px;
+            margin-left: 40px;
+        }
+
+        .e_y_e {
+            height: 30px;
+            width: 83%;
+            margin-left: 40px;
+            margin-top: 270px;
+            border:none;
+            border-bottom: 1px solid gray;
+        }
+
+        .snd {
+            height: 50px;
+            width: 50px;
+            /* border: 1px solid #000; */
+            border-radius: 100%;
+            margin-left: 650px;
+            margin-top: -50px;
+            background: linear-gradient(0deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+        }
+
+        .snd:hover {
+            background: linear-gradient(120deg, rgba(9, 198, 125, 0.596), rgba(1, 160, 246, 0.781));
+
+        }
+        .paper {
+            font-size: 26px;
+            margin-left: 10px;
+            margin-top: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .section_8 {
+            height: 150vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            background-image: url(./n113.jpg);
+            background-position: center;
+            background-size: contain;
+        }
+        .heading_4{
+            height: 70px;
+            width: 85%;
+            /* border: 1px solid #000; */
+            margin: auto;
+            margin-top: 40px;
+            padding: 1px;
+        }     
+        .progeny{
+            height: 100%;
+            width: 217px;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;   
+            margin-left: 0px;      
+        }
+        .img_6{
+            height: 100%;
+            width: 80%;
+            margin-left: 20px;
+        }
+        .heading_5{
+            height: 70px;
+            width: 75%;
+            /* border: 1px solid #000; */
+            margin: auto;
+            padding: 1px;
+            margin-top: 30px;            
+        }
+        .left{
+            margin-left: 30px;
+        }
+        .section_9{
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+        }
+        .regulate{
+            margin: auto;
+            margin-top: 120px;
+        }
+        .how{
+            font-size: 43px;
+            text-align: center;
+            margin-top:-43px;
+        }
+        .heading_6{
+            width: 90%;
+            height: 330px;
+            /* border: 1px solid #000; */
+            margin: auto;
+        }
+        .works{
+            height: 100%;
+            width: 24%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;   
+            position: relative;
+            margin-left: 5px;
+        }
+        .circle_3{
+            height:280px;
+            width: 280px;
+            border-radius: 100%;
+            /* background-color: blue; */
+            border: 2px dotted rgba(0, 0, 255, 0.384);
+        }
+        .animative_circle{
+            height: 250px;
+            width: 250px;
+            /* border: 5px solid #000; */
+            background: linear-gradient(120deg, rgb(1,161,244), rgb(9,198,125));
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            left: 10px;
+        }
+        .circle_3:hover .animative_circle{
+            animation-name: circle_33;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+       
+            @keyframes circle_33{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1.2);
+                opacity: 0;       
+            }
+        }
+
+        .sub_circle_2{
+            height: 250px;
+            width: 250px;
+            border-radius: 100%;
+            /* border: 2px solid #000; */
+            background: linear-gradient(120deg, rgb(1,161,244), rgb(9,198,125));
+            margin: auto;
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            padding: 1px;
+        }
+        .img_circle{
+            height: 180px;
+            width: 180px;
+            border-radius: 100%;
+            /* border: 1px solid #000;    */
+            margin-left: 30px;   
+            margin-top: 30px;   
+        }
+        .data_5{
+            font-size: 28px;
+            text-align: center;
+            font-weight: 500px;
+            margin-top: 14px;
+        }
+        .animative_circle_1{
+            height: 250px;
+            width: 250px;
+            background: linear-gradient(120deg, rgb(1,161,244), rgb(9,198,125));
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 12px;        
+        }
+       .circle_4:hover .animative_circle_1{
+            animation-name: sub_circle_44;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+    }
+        @keyframes sub_circle_44{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1.2);
+                opacity: 0;
+            }     
+            }
+        .circle_4{
+            height: 280px;
+            width: 280px;
+            border: 2px dotted  rgba(0, 0, 255, 0.384);
+            border-radius: 100%;
+            position: relative;
+        }
+        .sub_circle_3{
+            height: 250px;
+            width: 250px;
+            /* border: 1px solid #000; */
+            border-radius: 100%;
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            background: linear-gradient(120deg, rgb(1,161,244), rgb(9,198,125));
+        }
+         @keyframes sub_circle_4{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1.2);
+                opacity: 0;
+            }     
+            }
+        .img_circle_1{
+            height: 180px;
+            width: 180px;
+            border-radius: 100%;
+            /* border: 5px solid #000; */
+            margin-top: 30px;   
+            margin-left: 30px;   
+        }
+        .animative_circle_2{
+            height: 250px;
+            width: 250px;
+            background: linear-gradient(120deg, rgb(1,161,244), rgb(9,198,125));
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 12px;        
+        }
+        .circle_5:hover .animative_circle_2{
+            animation-name: sub_circle_5;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+     
+        }
+        @keyframes sub_circle_5 {
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }   
+            100%{
+                transform: scale(1.2);
+                opacity: 0;
+            }   
+        }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .circle_5{
+            height: 280px;
+            width: 280px;
+            border: 2px dotted  rgba(0, 0, 255, 0.384) ;
+            border-radius: 100%;
+            position: relative;               
+        }
+        .sub_circle_44{
+            height: 250px;
+            width: 250px;
+            /* border: 1px solid #000;    */
+            border-radius: 100%;
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            background: linear-gradient(120deg, rgb(1,161,244), rgb(9,198,125));
+        
+        }
+       
+        .img_circle_2{
+            height: 180px;
+            width: 180px;
+            /* border: 1px solid #000;    */
+            margin-top: 30px;
+            margin-left: 30px; 
+        }
+        .heading_7{
+            height: 100px;
+            width: 1100px;
+            /* border: 1px solid #000; */
+            margin: auto;
+            padding: 1px;
+        }
+        .mini{
+            height: 100%;
+            width:30%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        .m_cir{
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            border: 2px dotted rgba(0, 0, 255, 0.521);
+            margin-left: 10px;    
+            margin-top: 20px;   
+        }
+        .d_cir{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            background: linear-gradient(120deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+            /* border: 1px solid #000; */
+            margin-top: 7px;
+            margin-left: 7px;
+
+        }
+        .arrow{
+           color :rgb(9,199,120); 
+            margin-left: 66px;
+            margin-top: -55px;
+            font-size: 50px  
+        }
+        .line_2{
+            height: 1px;
+            width: 220px;
+            border: 2px dotted rgb(1,160,249);
+            margin-left: 90px;
+            margin-top: -30px;
+        }
+        .arrange{
+            display: inline-block;
+        }            
+        .section_10{
+            height: 150vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            background-color: rgb(239,241,247);
+        }    
+        .setting_2{
+            margin: auto;
+            margin-top: 100px;               
+        }
+        .recent{
+            font-size: 35px;
+            text-align: center;
+            margin-top: -40px;
+        }
+        .main_s{
+            height: 90vh;
+            width: 90%;
+            /* border: 1px solid #000; */
+            margin-top: 50px;
+            margin-left: 5%;
+            overflow: hidden;
+        }
+        .slider_55{
+            height: 100%;
+            width: 200%;
+            /* border: 3px solid red; */
+            padding: 1px;
+            animation-name: anime;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes anime {
+            0%{
+                margin-left: 0;
+            }
+            16.5%{
+                margin-left: 0;
+            }
+            33%{
+                margin-left: -33%;
+            }
+            49.5%{
+                margin-left: -33%;
+            }
+            66%{
+                margin-left:   -66%;
+            }
+            
+            82.5%{
+                margin-left:   -66%;
+            }
+            
+            100%{
+                margin-left:   -66%;
+            }
+        }        
+        .slider_animate_3{
+            height: 100%;
+            width: 15%;
+            /* border: 4px solid yellow; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left:30px;
+          }    
+            
+        .child_10{
+            height: 45vh;
+            width: 100%;
+        /* border: 1px solid blue; */
+        }            
+        .img_7{
+            height: 100%;
+            width: 100%;            
+        }            
+        .icon_5{
+            padding: 1px;
+            height: 30px;
+            width: 100%;
+            /* border: 1px solid #000;             */
+        }
+        .icon_manage{
+            height: 100%;
+            width: 10%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            
+        }
+        .clender{
+            font-size: 24px;
+            text-align: center;
+            color: rgb(1,160,249);
+        }        
+        .nov{
+            font-size:13px;
+            /* margin-top: -20px; */
+            /* margin-left: 30px;             */
+            color: rgb(141,141,141);
+        }
+        .clender_regulate{
+            font-size: 24px;
+            text-align: center;
+            color: rgb(1,160,249);
+            /* margin-left: 70px;    */
+        }
+        .nov_1{
+            font-size:13px;
+            /* margin-top: -20px; */
+            margin-left: 2%;            
+            color: rgb(141,141,141);
+            display: inline-block;
+            vertical-align: top;
+        }
+        .tex{
+            font-size: 24px;
+            color: rgb(1,160,249);    
+        }
+        .child_11{
+            height: 37vh;
+            width: 100%;
+            /* border: 1px solid blue; */
+            background-color: white;
+        }
+        .man{
+            font-size: 22px;
+            margin-top: 10px;
+        }
+        .man:hover{
+            color: rgba(0, 128, 0, 0.438);
+            cursor: pointer;
+        }
+        .tutral{
+            color: rgb(141,141,141);
+            font-size: 19px;
+            margin-top: 10px;
+        }
+        .r_m{
+            height: 50px;
+            width: 50%;
+            border: 1px solid white;
+            border-radius: 50px;
+            margin-top: 15px;
+            margin-left: 120px;
+            background: linear-gradient(10deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+            font-size: 20px;
+            color: white;
+        }    
+        .r_m:hover{
+            background: linear-gradient(120deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+            cursor: pointer;
+        }
+        .section_11{
+            height: 90vh;
+            width: 100%;
+            border: 1px dotted #000;
+            background-image: url(./n122.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .parent_9{
+            height: 100vh;
+            width: 40%;
+            /* border: 1px solid #000; */
+            margin-top: -190px;
+            margin-left: 100px;
+            background-color: white;
+            padding: 1px;   
+        }    
+        .locate{
+            font-size: 170px;
+            margin-left: 130px;
+            color: rgba(0, 0, 255, 0.452);   
+            
+        }
+        .arrengmnt{
+            margin-top: 10px;
+            margin-left: 140px;
+        }
+        .contact{
+            margin-top: -35px;
+            margin-left: 100px;
+            font-size: 40px;
+        }
+        .heading_8{
+            height: 360px;
+            width: 70%;
+            /* border: 1px solid #000; */
+            margin-left: 100px;   
+        }
+
+        .f_icon{
+            height: 32.5%;
+            width: 100%;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 15px;   
+        }
+        .style{
+            font-size: 45px;
+            margin-left: 10px;
+            margin-top: 0px;
+            color: rgb(51,194,196);
+        }            
+
+        .visit{
+            font-size: 21px;
+            color: black;
+            margin-left: 100px;
+            margin-top: -30px;
+        }
+        .old{
+            font-size: 16px;
+            color: gray;
+            margin-left: 100px;
+            margin-top:10px;            
+        }
+        .parent_10{
+        height: 514PX;
+        width: 48%;
+        /* border: 1px solid #000; */
+        margin-left: 670px;
+        margin-top: -400px;
+        }
+        .nam{
+            height: 50px;
+            width: 280px;
+            border: 1px solid white;
+            background-color: rgb(81,202,206);
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-left: 30px;
+        }
+        .height{
+            height: 220px;
+            width: 92%;
+            border: 1px solid white;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-left: 30px;
+            background-color: rgb(81,202,206);
+        }       
+        .but{
+            height: 60px;
+            width: 600px;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 19px;
+            margin-left: 30px;            
+        }    
+        .but:hover{
+            color: green;
+            cursor: pointer;
+        }    
+        .section_12{
+            padding: 1px;
+            height: 105vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            background-color: rgb(238,241,248);
+        }
+        .child_12{
+            height: 500px;
+            width: 350px;
+            display: inline-block;
+            vertical-align: top;
+            /* border: 2px solid #000; */
+        }
+        .logo{
+            height: 50px;
+            width: 190px;
+            /* border: 1px solid #000; */
+            margin: auto;
+            margin-top: 100px;   
+        }
+        .para{
+            font-size: 17px;
+            margin-top: 20px;
+            margin-left: 75px;
+            line-height: 30px;
+            color: rgb(105,105,105);
+        }
+        .icon_699{
+            height: 80px;
+            width: 300px;
+            /* border: 1px solid #000; */
+            padding: 1px;
+            margin: auto;
+        }
+        .iconic_div_55{
+            height: 50px;
+            width: 50px;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            border-radius: 100%;
+              background: linear-gradient(120deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+            transition: opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;          
+        }
+        .items{
+            font-size: 40px;
+            margin-left: 5px;
+            margin-top: 5px;
+            color: white;
+        }
+        .iconic_div_55:hover{
+            cursor: pointer;
+            background: linear-gradient(0deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+
+        }
+        
+        .child_last{
+            height: 500px;
+            width: 900px;
+            /* border: 5px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+            padding: 1px;
+        }
+
+        .container{
+            height: 450px;
+            width:  280px;
+            /* border: 1px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        .line_4{
+            height: 9px;
+            width: 150px;
+            background: linear-gradient(140deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));   
+            margin-left: 50px;
+            margin-top:130px;
+        }
+        .hour_1{
+            font-size: 25px;
+            margin-left: 40px;
+            margin-top: -26px;
+        }
+        .hour_2{
+            font-size: 17px;
+            margin-left: 40px;
+            margin-top:20px;
+            line-height: 30px;
+            color: rgb(105,105,105);      
+        }
+        .container_2{
+            height: 450px;
+            width:  320px;
+            /* border: 5px solid #000; */
+            display: inline-block;
+            vertical-align: top;      
+        }
+        .hour_6{
+         font-size: 25px;
+         margin-left: 50px;
+         margin-top: -29px;
+         
+        }
+        .item_3{
+            font-size: 18px;
+            margin-left: 50px;
+            list-style: none;   
+            color: rgb(105,105,105);      
+            margin-top: 13px;
+        }
+        .item_3:hover{
+            color: rgb(3,169,218);
+            cursor: pointer;
+        }
+
+        .manage{
+            height: 150px;
+            width: 100px;
+            /* border: 1px solid #000; */
+            margin-left: 210px;   
+            margin-top: -130px;               
+        }
+        .item_4{
+            font-size: 18px;
+            margin-left:10px;
+            list-style: none;   
+            color: rgb(105,105,105);      
+            margin-top: 13px;
+        }
+        .item_4:hover{
+            color: rgb(3,169,218);
+            cursor: pointer;
+        }
+
+        .container_3{
+            height: 450px;
+            width:  250px;
+            /* border: 2px solid #000; */
+            display: inline-block;
+            vertical-align: top;
+      
+        }        
+        .line_5{
+            height: 9px;
+            width: 140px;
+            background: linear-gradient(140deg, rgba(9, 198, 125, 0.699), rgba(1, 160, 246, 0.562));
+            margin-left: 40px;
+            margin-top:130px;
+        }
+        .tos{
+            font-size: 25px;
+            margin-left: 40px;
+            margin-top: -25px;
+        }
+        .con_1{
+            font-size: 18px;
+            margin-left: 40px;
+            list-style: none;   
+            color: rgb(105,105,105);      
+            margin-top: 13px;          
+        }
+        .con_1:hover{
+            color: rgb(3,169,218);
+            cursor: pointer;
+        }
+        .child_13{
+            padding: 1px;
+            height: 79px;
+            width: 100%;
+            /* border: 1px solid #000; */
+            margin-top: 20px;
+        }
+        .line_7{
+            height: 2px;
+            width: 80%;
+            background-color: rgb(105,105,105);       
+            margin: auto;
+            margin-top:20px;
+        }
+        .copyright{
+        font-size: 20px;
+        /* font-family: 100px; */
+        margin-left: 500px;
+        margin-top: 20px;
+        color: rgb(105,105,105);
+        }
+        .copyright_1{
+            font-size: 20px;
+        /* font-family: 200px; */
+        margin-left: 690px;
+        margin-top: -23px;
+        color: rgb(105,105,105);
+        }
+        .copyright_1:hover{
+            color:rgba(0, 0, 255, 0.404);
+            cursor: pointer; 
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <section class="section_1">
+        <div class="header">
+
+            <i class="fa-regular fa-envelope mail_1"></i>
+            <p class="info">info@yourwebsite.com</p>
+            <div class="phone_1">
+                <i class="fa-solid fa-phone phone"></i>
+                <p class="no">+321(34)5532</p>
+            </div>
+            <div class="advatise">
+                <li class="data"><i class="fa-brands fa-google-plus-g google"></i> </li>
+                <li class="data"><i class="fa-brands fa-square-facebook google"></i></li>
+                <li class="data"><i class="fa-brands fa-twitter google"></i></li>
+                <li class="data"><i class="fa-brands fa-linkedin google"></i></li>
+            </div>
+        </div>
+        <div class="heading"></div>
+        <div class="Neuron_1">
+            <img class="img" src="./n102.png" alt="">
+        </div>
+        <div class="heading_1">
+            <li class="feature"> Home</li>
+            <li class="feature"> about </li>
+            <li class="feature">Feature</li>
+            <li class="feature">shops</li>
+            <li class="feature">Pages</li>
+            <li class="feature">Blog</li>
+            <li class="feature">contact</li>
+
+        </div>
+        <div class="store">
+            <i class="fa-solid fa-store i_store"></i>
+            <i class="fa-solid fa-magnifying-glass search"></i>
+        </div>
+        <div class="parent">
+            <div class="child_1">
+                <h1 class="learning">AI & Learning <br>Products Creators</h1>
+                <p class="invoive">Invoive machine learning products and servies on a trust platform</p>
+                <button class="l_m">LEARN MORE</button>
+                <button class="j_n">JOIN NOW</button>
+            </div>
+            <div class="child_2">
+                <div class="child_2_1">
+                    <img class="animate" src="./n106.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_2">
+        <div class="parent_1">
+            <div class="ch child_3">
+                <div class="img_1">
+                    <img class="imge" src="Screenshot__2_-removebg-preview (1).png" alt="">
+                </div>
+                <h1 class="advanced">Advanced Proframing</h1>
+                <p class="find">Find out what's working and <br> what's not Dig your data to find</p>
+            </div>
+
+            <div class="ch child_4">
+                <div class="img_2">
+                    <img class="imge" src="./Screenshot__3_-removebg-preview.png" alt="">
+                </div>
+                <h1 class="advanced">Advanced Proframing</h1>
+                <p class="find">Find out what's working and <br> what's not Dig your data to find</p>
+            </div>
+            <div class="ch child_5">
+                <div class="img_2">
+                    <img class="imge" src="./Screenshot__4_-removebg-preview.png" alt="">
+                </div>
+                <h1 class="advanced">Advanced Proframing</h1>
+                <p class="find">Find out what's working and <br> what's not Dig your data to find</p>
+            </div>
+            <div class="ch child_6">
+                <div class="img_3">
+                    <img class="imge" src="./Screenshot__1_-removebg-preview.png" alt="">
+                </div>
+                <h1 class="advanced">AI integration</h1>
+                <p class="find">Find out what's working and <br> what's not Dig your data to find</p>
+            </div>
+        </div>
+        <div class="parent_2">
+            <div class="line"></div>
+            <h1 class="power">Power Your Creativity With Artificial Intelligence</h1>
+            <p class="dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at <br> dictum risus, non
+                suscipit arcu. Quisque aliquam posuere tortor, <br> sit amet convallis nunc scelerisque in. </p>
+            <p class="dolor_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore <br> eius molesti ae
+                facere, natus reprehenderit eaque eum, autem <br> ipsam. Magni, error. Tem pora odit laborum iure
+                inventore possimus laboriosam qui nam. Fugit!</p>
+            <button class="l_m_1 ">Learn More</button>
+        </div>
+    </section>
+    <section class="section_3">
+        <div class="parent_3">
+
+            <h1 class="we">We Create The Most Realistic Artificial Intelligence</h1>
+            <p class="dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at <br> dictum risus, non
+                suscipit arcu. Quisque aliquam posuere tortor, <br> sit amet convallis nunc scelerisque in. </p>
+            <p class="dolor_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore <br> eius molesti ae
+                facere, natus reprehenderit eaque eum, autem <br> ipsam. Magni, error. Tem pora odit laborum iure
+                inventore possimus laboriosam qui nam. Fugit!</p>
+            <button class="l_m_1 ">Learn More</button>
+            <div class="circle_2">
+                <div class="sub_circle"></div>
+                <div class="icons_4">
+                    <i class="fa-solid fa-play playIcon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="parent_4"></div>
+    </section>
+    <section class="section_4">
+        <div class="parent_5">
+            <li class="experts">
+                <h1 class="project">6000+</h1>
+                <p class="complete">Complete Project</p>
+            </li>
+
+            <li class="experts">
+                <h1 class="project">400+</h1>
+                <p class="complete">NLP Expert</p>
+            </li>
+            <li class="experts">
+                <h1 class="project">3500+</h1>
+                <p class="complete">Satisfied Clients</p>
+            </li>
+            <li class="experts">
+                <h1 class="project">8000+</h1>
+                <p class="complete">Industries Served</p>
+            </li>
+        </div>
+    </section>
+    <section class="section_5">
+        <div class="line margin"></div>
+        <h1 class="our">Our Core Services</h1>
+        <div class="containerOur">
+            <li class="box card">
+                <img class=" pic3" src="./p3.png" alt="">
+                <h1 class=" virtual">Virtual Personal Assistants</h1>
+                <p class="  low">Capitalize on low hanging fruit to <br> identify a ball park value added activity <br>
+                    to beta test. Override the digital divide <br> with additional
+                </p>
+            </li>
+            <li class=" box card">
+                <img class=" pic3" src="./p4.png" alt="">
+                <h1 class=" virtual">Vedios Surveillance</h1>
+                <p class="  low">> Capitalize on low hanging fruit to <br> identify a ball park value added activity
+                    <br> to beta test. Override the digital divide <br> with additional</p>
+            </li>
+            <li class="box card">
+                <img class=" pic3" src="./p5.png" alt="">
+                <h1 class=" virtual">Social Media services</h1>
+                <p class="  low"> fly a ball park value added activity <br> to beta test. Override the digital divide
+                    <br> with additional</p>
+            </li>
+        </div>
+        <div class="containerour margin">
+            <li class="box card">
+                <img class=" pic3" src="./p1.png" alt="">
+                <h1 class=" virtual">Virtual Personal Assistants</h1>
+                <p class="  low">Capitalize on low hanging fruit to <br> identify a ball park value added activity <br>
+                    to beta test. Override the digital divide <br> with additional
+                </p>
+            </li>
+            <li class=" box card">
+                <img class=" pic3" src="./p2.png" alt="">
+                <h1 class=" virtual">Vedios Surveillance</h1>
+                <p class="  low">> Capitalize on low hanging fruit to <br> identify a ball park value added activity
+                    <br> to beta test. Override the digital divide <br> with additional</p>
+            </li>
+            <li class="box card">
+                <img class=" pic3" src="./p6.png" alt="">
+                <h1 class=" virtual">Social Media services</h1>
+                <p class="  low"> fly a ball park value added activity <br> to beta test. Override the digital divide
+                    <br> with additional</p>
+            </li>
+        </div>
+    </section>
+    <section class="section_6">
+
+        <div class="line arrange"></div>
+
+        <h1 class="latest">Our Latest Project</h1>
+
+        <div class="main">
+            <div class="slide">
+                <div class="slider">
+                    <img class="img_4" src="./n110.jpg" alt="">
+                    <div class="content">
+                        <h1 class="api">Vocal Avator API</h1>
+                    </div>
+
+                </div>
+                <div class="slider">
+                    <img class="img_4" src="./n111.jpg" alt="">
+                    <div class="content">
+
+                        <h1 class="api">Vocal Avator API</h1>
+
+                    </div>
+
+                </div>
+                <div class="slider">
+                    <img class="img_4" src="./n112.jpg" alt="">
+                    <div class="content">
+                        <h1 class="api">Vocal Avator API</h1>
+
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="img_4" src="./n110.jpg" alt="">
+                    <div class="content">
+                        <h1 class="api">Vocal Avator API</h1>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="img_4" src="./n112.jpg" alt="">
+                    <div class="content">
+                        <h1 class="api">Vocal Avator API</h1>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="img_4" src="./n111.jpg" alt="">
+                    <div class="content">
+                        <h1 class="api">Vocal Avator API</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section_8">
+
+        <div class="parent_8">
+            <div class="child_8">
+                <img class="screenshot" src="./Screenshot (8).png" alt="">
+            </div>
+                <div class="child_9">
+
+                     <div class="line setting"></div>
+                    <h1 class="miss">Dont Miss Our News <br> And Updates!</h1>
+                    <input class="e_y_e" type="text" placeholder="Enter Your Email">
+                    <div class="snd">
+                        <i class="fa-solid fa-paper-plane paper"></i>
+                    </div>  
+                </div>
+        </div>
+        <div class="heading_4">
+            <li class="progeny">
+                <img class="img_6" src="./n114.png" alt=""></li>
+            <li class="progeny">
+                <img class="img_6" src="./n115.png" alt=""></li></li>
+            <li class="progeny">
+                <img class="img_6" src="./n116.png" alt=""></li>
+            <li class="progeny">
+                <img class="img_6" src="./n117.png" alt="">
+            </li>
+            <li class="progeny">
+                <img class="img_6" src="./n118.png" alt="">
+            </li>
+        </div>
+        <div class="heading_5">
+            <li class="progeny left">
+                <img class="img_6 " src="./n114.png" alt=""></li>
+            <li class="progeny left">
+                <img class="img_6 " src="./n115.png" alt=""></li></li>
+            <li class="progeny left">
+                <img class="img_6 " src="./n116.png" alt=""></li>
+            <li class="progeny left">
+                <img class="img_6 " src="./n117.png" alt="">
+            </li>
+        </div>
+    </section>
+    <section class="section_9">
+        <div class="line regulate"></div>
+        <h1 class="how"> How We works</h1>
+        <div class="heading_6">
+            <li class="works">
+                <div class="circle_3">
+                    <div class="animative_circle"></div>
+                    <div class="sub_circle_2">
+                        <img class="img_circle" src="./Screenshot__10_-removebg-preview.png" alt="">
+                    </div>
+                    
+                </div>
+                <h1 class="data_5">data generated</h1>
+
+
+
+            </li>
+            <li class="works">
+                <div class="circle_4">
+                    <div class="animative_circle_1"></div>
+                    <div class="sub_circle_3">
+                        <img class="img_circle_1" src="./Screenshot__11_-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <h1 class="data_5">data stored</h1>
+
+            </li>
+            <li class="works">
+                <div class="circle_5">
+                    <div class="animative_circle_2"></div>
+                <div class="sub_circle_44">
+                    <img class="img_circle_2" src="./Screenshot__12_-removebg-preview.png" alt="">
+                </div>
+            </div>
+                <h1 class="data_5">data Processing</h1>
+            </li>
+            <li class="works">
+                <div class="circle_5">
+                    <div class="animative_circle_2"></div>
+                    <div class="sub_circle_44">
+                        <img class="img_circle_2" src="./Screenshot__13_-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                    <h1 class="data_5">actionable sights</h1>
+            </li>
+        </div>
+
+        <div class="heading_7">
+            <li class="mini">
+                <div class="m_cir">
+                    <div class="d_cir"></div>
+                </div>
+                <h1 class="arrow"> > </h1>
+                <div class="line_2"></div>
+            </li>
+            <li class="mini">
+                <div class="m_cir">
+                    <div class="d_cir"></div>
+                </div>
+                <h1 class="arrow"> > </h1>
+                <div class="line_2"></div>
+            </li>
+            <li class="mini">
+                <div class="m_cir">
+                    <div class="d_cir"></div>
+                </div>
+                <h1 class="arrow"> > </h1>
+                <div class="line_2"></div>
+            </li>
+            <div class="m_cir arrange">
+                <div class="d_cir"></div>
+            </div>
+        </div>
+    </section>
+    <section class="section_10">
+        <div class="line setting_2"></div>
+        <h1 class="recent">Recent Blog Post</h1>
+        <div class="main_s">
+            <div class="slider_55">
+            <div class="slider_animate_3">
+                <div class="child_10">
+                    <img class="img_7" src="./n119.jpg" alt=""> </div>
+                    <div class="icon_5">
+
+                        <p class="nov_1">
+                            <i class="fa-regular fa-calendar-check clender"></i>
+                            <span class="nov">Nov28,2019</span>
+                        </p>
+                            
+                        <p class="nov_1">
+                            
+                            <i class="fa-solid fa-user clender_regulate"></i>
+                            <span class="nov">Nov28,2019</span> 
+                        </p>
+                        <p class="nov_1 ">
+                            <span class="tex">10</span>
+                            <span class="nov">Comments</span></p>
+                        </div>
+                        <div class="child_11">
+                            <h1 class="man">Man in red plaid shart talking <br> on phone seource</h1>  
+                            <p  class="tutral">the tutraul more examples of <br>
+                            identification and rew genrfiled and <br>verifies if A picture                            
+                            </p>  
+                            <button class="r_m">Read More</button>
+                        </div>                            
+                
+            </div>
+            <div class="slider_animate_3">
+                
+                <div class="child_10">
+                    <img class="img_7" src="./n120.jpg" alt=""> </div>
+                    <div class="icon_5">
+
+                        <p class="nov_1">
+                            <i class="fa-regular fa-calendar-check clender"></i>
+                            <span class="nov">Nov28,2019</span>
+                        </p>
+                            
+                        <p class="nov_1">
+                            
+                            <i class="fa-solid fa-user clender_regulate"></i>
+                            <span class="nov">Nov28,2019</span> 
+                        </p>
+                        <p class="nov_1 ">
+                            <span class="tex">10</span>
+                            <span class="nov">Comments</span></p>
+                        </div>
+                        <div class="child_11">
+                            <h1 class="man">Man in red plaid shart talking <br> on phone seource</h1>  
+                            <p  class="tutral">the tutraul more examples of <br>
+                            identification and rew genrfiled and <br>verifies if A picture                            
+                            </p>  
+                            <button class="r_m">Read More</button>
+                        </div>
+              
+            </div>
+            <div class="slider_animate_3">
+                <div class="child_10">
+                    <img class="img_7" src="./n121.jpg" alt=""> </div>
+                    <div class="icon_5">
+
+                        <p class="nov_1">
+                            <i class="fa-regular fa-calendar-check clender"></i>
+                            <span class="nov">Nov28,2019</span>
+                        </p>
+                            
+                        <p class="nov_1">
+                            
+                            <i class="fa-solid fa-user clender_regulate"></i>
+                            <span class="nov">Nov28,2019</span> 
+                        </p>
+                        <p class="nov_1 ">
+                            <span class="tex">10</span>
+                            <span class="nov">Comments</span></p>
+                        </div>
+                        <div class="child_11">
+                            <h1 class="man">Man in red plaid shart talking <br> on phone seource</h1>  
+                            <p  class="tutral">the tutraul more examples of <br>
+                            identification and rew genrfiled and <br>verifies if A picture                            
+                            </p>  
+                            <button class="r_m">Read More</button>
+                        </div>
+              
+
+            </div>
+            <div class="slider_animate_3">
+                <div class="child_10">
+                    <img class="img_7" src="./n119.jpg" alt=""> </div>
+                    <div class="icon_5">
+
+                        <p class="nov_1">
+                            <i class="fa-regular fa-calendar-check clender"></i>
+                            <span class="nov">Nov28,2019</span>
+                        </p>
+                            
+                        <p class="nov_1">
+                            
+                            <i class="fa-solid fa-user clender_regulate"></i>
+                            <span class="nov">Nov28,2019</span> 
+                        </p>
+                        <p class="nov_1 ">
+                            <span class="tex">10</span>
+                            <span class="nov">Comments</span></p>
+                        </div>
+                        <div class="child_11">
+                            <h1 class="man">Man in red plaid shart talking <br> on phone seource</h1>  
+                            <p  class="tutral">the tutraul more examples of <br>
+                            identification and rew genrfiled and <br>verifies if A picture                            
+                            </p>  
+                            <button class="r_m">Read More</button>
+                        </div>
+              
+            </div>
+            <div class="slider_animate_3">
+                <div class="child_10">
+                    <img class="img_7" src="./n120.jpg" alt=""> </div>
+                    <div class="icon_5">
+
+                        <p class="nov_1">
+                            <i class="fa-regular fa-calendar-check clender"></i>
+                            <span class="nov">Nov28,2019</span>
+                        </p>
+                            
+                        <p class="nov_1">
+                            
+                            <i class="fa-solid fa-user clender_regulate"></i>
+                            <span class="nov">Nov28,2019</span> 
+                        </p>
+                        <p class="nov_1 ">
+                            <span class="tex">10</span>
+                            <span class="nov">Comments</span></p>
+                        </div>
+                        <div class="child_11">
+                            <h1 class="man">Man in red plaid shart talking <br> on phone seource</h1>  
+                            <p  class="tutral">the tutraul more examples of <br>
+                            identification and rew genrfiled and <br>verifies if A picture                            
+                            </p>  
+                            <button class="r_m">Read More</button>
+                        </div>
+              
+            </div>
+            <div class="slider_animate_3">
+                <div class="child_10">
+                    <img class="img_7" src="./n121.jpg" alt=""> </div>
+                    <div class="icon_5">
+
+                        <p class="nov_1">
+                            <i class="fa-regular fa-calendar-check clender"></i>
+                            <span class="nov">Nov28,2019</span>
+                        </p>
+                            
+                        <p class="nov_1">
+                            
+                            <i class="fa-solid fa-user clender_regulate"></i>
+                            <span class="nov">Nov28,2019</span> 
+                        </p>
+                        <p class="nov_1 ">
+                            <span class="tex">10</span>
+                            <span class="nov">Comments</span></p>
+                        </div>
+                        <div class="child_11">
+                            <h1 class="man">Man in red plaid shart talking <br> on phone seource</h1>  
+                            <p  class="tutral">the tutraul more examples of <br>
+                            identification and rew genrfiled and <br>verifies if A picture                            
+                            </p>  
+                            <button class="r_m">Read More</button>
+                        </div>              
+            </div>
+              </div>
+
+        </div>
+    </section>
+    <div class="section_11" >
+        <div class="parent_9">
+            <i class="fa-solid fa-map-location locate"></i>
+
+            <div class="line arrengmnt"></div>
+            <h1 class="contact">Contact With Us</h1>
+            <div class="heading_8">
+
+                <li class="f_icon">
+                    <i class="fa-regular fa-location-dot style"></i>
+                    <h1 class="visit">visit Us</h1>
+                    <p class="old">530 Old BUffalo Street <br>
+                        Northwest #205, New York - 3087</p>
+                </li>
+                <li class="f_icon">
+                    <i class="fa-regular fa-envelope style"></i>
+                   <h1 class="visit"> Email Us</h1>
+                   <p class="old">infoname@gmail.com <br>
+                    www.yourname.com
+                    </p>
+                </li>
+                <li class="f_icon">
+                    <i class="fa-solid fa-id-badge style"></i>
+                    <h1 class="visit">contact Us</h1>
+                    <p class="old">
+                        +1 (123) -456-7890 <br>
+                        +1 (123) -456-7890
+                        </p>
+                </li>
+            </div>
+        </div>
+        <div class="parent_10">
+
+            <input class="nam" type="text" placeholder="Name">
+            <input   class="nam" type="text" placeholder="E-mail">
+            <input   class="nam" type="text" placeholder="Phone">
+            <input   class="nam" type="text" placeholder="subject">
+            <input   class=" height" type="text" placeholder="Your Message">
+
+            <button class="but">Submit Now!</button>
+
+        </div>        
+    </div>
+    <section class="section_12">
+        <div class="child_12">
+            <div class="logo">
+                <img src="./n124.png" alt="">
+            </div>
+            <div class="para">Lorem ipsum dolor sit amet,<br> conse turini adipiscing elit, <br> sed do eiusmod tempor in <br> cididunt ut labore</div>
+            <div class="icon_699">
+                <li class="iconic_div_55">
+                    <i class="fa-brands fa-facebook items"></i>
+                </li>
+                <li class="iconic_div_55">
+                    <i class="fa-brands fa-instagram items "></i>
+                </li>
+                <li class="iconic_div_55">
+                    <i class="fa-brands fa-twitter items"></i>
+                </li>
+            </div>
+        </div>
+            <div class="child_last">
+
+                <div class="container">
+                    <div class="line_4"></div>
+                    <h1 class="hour_1">WORK HOURS</h1>
+                    <p class="hour_2" >10.00 AM - 6.00 PM , Monday <br> - Saturday</p>
+                    <p class="hour_2">Our Support and Sales team is <br> available 24 * 7 to answer your <br> queries</p>
+            </div>
+            <div class="container_2">
+                <div class="line_4"></div>
+                <h1 class="hour_6">NAVIGATE</h1>
+                <li class="item_3">About Us</li>
+                <li class="item_3">Features</li>
+                <li class="item_3">Mobile App</li>
+                <li class="item_3">softwere Demo</li>
+                <li class="item_3">software download</li>
+                <div class="manage">
+                    <li class="item_4">Blog </li>
+                    <li class="item_4">Team</li>
+                    <li class="item_4">Chatbot</li>
+                </div>
+            </div>
+            <div class="container_3">
+                <div class="line_5"></div>
+                <h1 class="tos">Privacy& Tos</h1>
+                <li class="con_1">Contact</li>         
+                <li class="con_1">Login</li>          
+                <li class="con_1">contact</li>          
+                <li class="con_1">Register</li>          
+            </div>
+            </div>
+        
+         <div class="child_13">
+            <div class="line_7"></div>
+            <h1 class="copyright">© Copyrights 2019</h1>
+            <h1 class="copyright_1"> AuburnForest</h1>
+
+
+
+        </div> 
+
+    </section>
+</body>
+
+</html>
+

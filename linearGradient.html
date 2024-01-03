@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Gradient</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            width: 100%;
+            background-color: wheat;
+            padding: 1px;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            border: 3px solid blue;
+            margin: auto;
+            margin-top: 150px;
+
+            /* background: linear-gradient( degree,  minimum two colors    ); */
+
+            background: linear-gradient(140deg, red , blue);
+        }
+        .box:hover {
+            background: linear-gradient(-140deg , red , blue);
+        }
+        .icon{
+            height: 50px;
+            width: 50px;
+            margin-left: 40%;
+            margin-top: 60px;
+            filter: brightness(0%);
+        }
+        .box:hover .icon{
+            filter: brightness(100%);
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="main">
+
+        <div class="box">
+
+            <img class="icon" src="./Screenshot__1_-removebg-preview.png" alt="">
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
